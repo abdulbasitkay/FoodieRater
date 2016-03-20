@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/tool_bar"
+
+        ></include>
+
+    <LinearLayout
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:textSize="25dp"
+            android:layout_width="242dp"
+            android:layout_height="wrap_content"
+            android:text="Add a Meal"
+            android:id="@+id/details"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Meal Name"
+            android:layout_marginLeft="100dp"
+            android:id="@+id/Name"
+            android:textSize="20dp"
+            />
+
+        <EditText
+            android:layout_marginLeft="100dp"
+
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content"
+            android:layout_width="224dp"
+            android:id="@+id/editname" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Phone "
+            android:layout_marginLeft="100dp"
+            android:id="@+id/phone"
+            android:textSize="20dp"
+            />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar"
+            android:layout_gravity="center_horizontal"
+            android:numStars="5"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:id="@+id/image_display"
+                android:background="@drawable/image_default"
+                android:layout_gravity="center|bottom" />
+
+            <ImageButton
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="50dp"
+                android:layout_height="55dp"
+                android:id="@+id/imageView"
+                android:background="@android:drawable/ic_menu_camera"
+                android:layout_gravity="center|bottom"
+                android:layout_weight="0.12"
+                android:clickable="true" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:id="@+id/save" />
+
+    </LinearLayout>
+</RelativeLayout>
