@@ -1,14 +1,12 @@
 package com.abulkay.foodierater;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -29,7 +27,7 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, AddMealActivity.class);
-                startActivityForResult(intent,0);
+                startActivity(intent);
             }
         });
     }
