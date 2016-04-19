@@ -1,4 +1,4 @@
-package com.abulkay.foodierater;
+package com.abulkay.foodierater.Layouts;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -11,11 +11,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.Toast;
+import android.widget.RatingBar;
 
-import java.io.FileNotFoundException;
+import com.abulkay.foodierater.R;
+
 import java.io.FileOutputStream;
-import java.io.IOException;
 
 
 public class AddMealActivity extends ActionBarActivity {
@@ -26,6 +26,7 @@ public class AddMealActivity extends ActionBarActivity {
     Button saveButton;
     FileOutputStream fOut;
     EditText mealNameTxtBox;
+    RatingBar ratingBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,21 +35,12 @@ public class AddMealActivity extends ActionBarActivity {
         setContentView(R.layout.activity_add_meal);
 
         mealNameTxtBox = (EditText) findViewById(R.id.mealName);
-        cameraButton = (ImageButton) findViewById(R.id.imageView);
+        cameraButton = (ImageButton) findViewById(R.id.cameraButton);
         iv = (ImageView) findViewById(R.id.image_display);
         saveButton = (Button) findViewById(R.id.save);
 
-
-        try {
-            fOut = openFileOutput("file name here", MODE_PRIVATE);
-        } catch (FileNotFoundException e) {
-            Toast.makeText(AddMealActivity.this, "Sorry an error occured\n Please restart the app",
-                    Toast.LENGTH_SHORT).show();
-        }
-
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
 
         cameraButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,15 +53,6 @@ public class AddMealActivity extends ActionBarActivity {
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String str = "data";
-                try {
-                    fOut.write(str.getBytes());
-                    fOut.close();
-                } catch (IOException ignored) {
-                    Toast.makeText(AddMealActivity.this, "Sorry an error occured\n Please restart the app",
-                            Toast.LENGTH_SHORT).show();
-
-                }
 
 
             }

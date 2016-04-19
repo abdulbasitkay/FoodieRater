@@ -45,7 +45,7 @@
             android:layout_marginTop="5dp" />
 
         <TextView
-            android:id="@+id/phone"
+            android:id="@+id/rating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="100dp"
@@ -79,7 +79,7 @@
                 android:background="@drawable/image_default" />
 
             <ImageButton
-                android:id="@+id/imageView"
+                android:id="@+id/cameraButton"
                 android:layout_width="50dp"
                 android:layout_height="55dp"
                 android:layout_gravity="center|bottom"
