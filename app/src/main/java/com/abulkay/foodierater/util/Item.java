@@ -1,9 +1,11 @@
 package com.abulkay.foodierater.util;
 
+import java.io.Serializable;
+
 /**
  * Created by akay on 4/3/16.
  */
-public class Item {
+public class Item implements Serializable {
     private String mImageUrl;
     private String mMealName;
     private float mRating;

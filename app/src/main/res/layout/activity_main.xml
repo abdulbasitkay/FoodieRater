@@ -11,32 +11,26 @@
         ></include>
 
     <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:id="@+id/frameLayout">
+        android:layout_alignParentTop="true">
 
-        <ScrollView
-            android:id="@+id/display_layout"
-            android:orientation="vertical"
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:paddingTop="20dp"
-            android:padding="5dp">
-
-        </ScrollView>
+            android:layout_height="match_parent" />
 
         <ImageButton
-            android:layout_margin="15dp"
+            android:id="@+id/imageButton"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:src="@android:drawable/ic_input_add"
+            android:layout_gravity="right|bottom"
+            android:layout_margin="15dp"
             android:background="@drawable/circle"
-            android:id="@+id/imageButton"
-            android:layout_gravity="right|bottom" />
+            android:src="@android:drawable/ic_input_add" />
 
 
     </FrameLayout>
